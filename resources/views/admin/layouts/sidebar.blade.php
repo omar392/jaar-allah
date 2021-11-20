@@ -103,6 +103,13 @@
                             </a>
                         </li>
                         @endif
+                        @if(Auth::guard('admin')->user()->hasPermission('seos-read'))
+                        <li>
+                            <a href="{{route('seo')}}" class="waves-effect">
+                                <i class="fas fa-search"></i><span style="font-family: cairo;">إعدادات محركات البحث</span>
+                            </a>
+                        </li>
+                        @endif
                     </ul>
 
                 </div>

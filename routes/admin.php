@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\IssueController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\TeamController;
@@ -77,6 +78,10 @@ Route::post('gallery_status',[GalleryController::class,'galleryStatus'])->name('
 //our services 
 Route::resource('service', ServiceController::class);
 Route::post('service_status',[ServiceController::class,'serviceStatus'])->name('service.status');
+
+//seo
+Route::get('seo',[SeoController::class,'index'])->name('seo');
+Route::post('seo',[SeoController::class,'update'])->name('updateseo');
 
 });
 

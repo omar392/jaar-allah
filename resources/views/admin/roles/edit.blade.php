@@ -43,6 +43,9 @@
                                             </tr>
 
                                             @foreach($models as $index=>$model)
+                                            @if($model == 'seos')
+                                            <?php $actions = ['read', 'update']; ?>
+                                            @endif
                                             @if($model == 'settings')
                                             <?php $actions = ['read', 'update']; ?>
                                             @endif

@@ -27,6 +27,7 @@ return [
             'issues'=>'c,r,u,d',
             'decisions'=>'c,r,u,d',
             'services'=>'c,r,u,d',
+            'seos'=>  'r,u',
             'settings' => 'r,u',
             'abouts' => 'r,u',
             
