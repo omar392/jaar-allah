@@ -40,10 +40,38 @@
                             </a>
                         </li>
                         @endif
+                        @if(Auth::guard('admin')->user()->hasPermission('issues-read'))
+                        <li>
+                            <a href="{{route('issue.index')}}" class="waves-effect">
+                                <i class="fab fa-quinscape"></i><span style="font-family: cairo;">المرافعات</span>
+                            </a>
+                        </li>
+                        @endif
+                        @if(Auth::guard('admin')->user()->hasPermission('decisions-read'))
+                        <li>
+                            <a href="{{route('decision.index')}}" class="waves-effect">
+                                <i class="fas fa-clipboard-check"></i><span style="font-family: cairo;">قرارات مجلس الأمة</span>
+                            </a>
+                        </li>
+                        @endif
+                        @if(Auth::guard('admin')->user()->hasPermission('galleries-read'))
+                        <li>
+                            <a href="{{route('gallery.index')}}" class="waves-effect">
+                                <i class="far fa-images"></i><span style="font-family: cairo;">معرض الصور</span>
+                            </a>
+                        </li>
+                        @endif
                         @if(Auth::guard('admin')->user()->hasPermission('customers-read'))
                         <li>
                             <a href="{{route('customer.index')}}" class="waves-effect">
                                 <i class="fas fa-tasks"></i><span style="font-family: cairo;">العملاء</span>
+                            </a>
+                        </li>
+                        @endif
+                        @if(Auth::guard('admin')->user()->hasPermission('services-read'))
+                        <li>
+                            <a href="{{route('service.index')}}" class="waves-effect">
+                                <i class="fas fa-check-circle"></i><span style="font-family: cairo;">الخدمات</span>
                             </a>
                         </li>
                         @endif

@@ -6,9 +6,13 @@ use App\Http\Controllers\Admin\AdminsController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CustomerController;
+use App\Http\Controllers\Admin\DecisionController;
 use App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\Admin\IssueController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\TeamController;
 use Illuminate\Support\Facades\Route;
@@ -54,9 +58,25 @@ Route::post('banner_status',[BannerController::class,'bannerStatus'])->name('ban
 Route::resource('customer', CustomerController::class);
 Route::post('customer_status',[CustomerController::class,'customerStatus'])->name('customer.status');
 
-//blog 
+//blog
 Route::resource('blog', BlogController::class);
 Route::post('blog_status',[BlogController::class,'blogStatus'])->name('blog.status');
+
+//issue
+Route::resource('issue', IssueController::class);
+Route::post('issue_status',[IssueController::class,'issueStatus'])->name('issue.status');
+
+//decision
+Route::resource('decision', DecisionController::class);
+Route::post('decision_status',[DecisionController::class,'decisionStatus'])->name('decision.status');
+
+//gallery
+Route::resource('gallery', GalleryController::class);
+Route::post('gallery_status',[GalleryController::class,'galleryStatus'])->name('gallery.status');
+
+//our services 
+Route::resource('service', ServiceController::class);
+Route::post('service_status',[ServiceController::class,'serviceStatus'])->name('service.status');
 
 });
 

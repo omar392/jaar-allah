@@ -16,6 +16,8 @@ class CreateGalleriesTable extends Migration
         Schema::create('galleries', function (Blueprint $table) {
             $table->id();
             $table->string('image');
+            $table->string('name_ar');
+            $table->string('name_en');
             $table->enum('status',['active','inactive'])->default('inactive');
             $table->timestamps();
         });
