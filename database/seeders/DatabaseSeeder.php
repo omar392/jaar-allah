@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(SettingSeeder::class);
         $this->call(AboutSeeder::class);
         $this->call(SeoSeeder::class);
+        $this->call(CounterSeeder::class);
         
     }
 }

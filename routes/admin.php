@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminsController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\CounterController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\DecisionController;
 use App\Http\Controllers\Admin\FaqController;
@@ -83,5 +84,8 @@ Route::post('service_status',[ServiceController::class,'serviceStatus'])->name('
 Route::get('seo',[SeoController::class,'index'])->name('seo');
 Route::post('seo',[SeoController::class,'update'])->name('updateseo');
 
+//counter
+Route::get('counter',[CounterController::class,'index'])->name('counter');
+Route::post('counter',[CounterController::class,'update'])->name('updatecounter');
 });
 

@@ -25,7 +25,7 @@ class RoleController extends Controller
      */
     public function index()
     {
-        $models = ['admins','teams','roles','blogs','faqs','customers','banners','services','galleries','issues','decisions','seos','settings','abouts'];
+        $models = ['admins','teams','roles','blogs','faqs','customers','banners','services','galleries','issues','decisions','seos','settings','abouts','counters'];
         $actions = ['create', 'read', 'update', 'delete'];
        $role =  Role::idDescending()->whereRoleNot(['super_admin'])->with('permissions')->get();
        return view('admin.roles.index',compact(['role','models','actions']));
@@ -74,7 +74,7 @@ class RoleController extends Controller
      */
     public function edit($id)
     {
-        $models = ['admins','teams','roles','blogs','faqs','customers','banners','services','galleries','issues','decisions','seos','settings','abouts'];
+        $models = ['admins','teams','roles','blogs','faqs','customers','banners','services','galleries','issues','decisions','seos','settings','abouts','counters'];
         $actions = ['create', 'read', 'update', 'delete'];
         $role = Role::findOrFail($id);
         return view('admin.roles.edit',compact('role','models','actions'));

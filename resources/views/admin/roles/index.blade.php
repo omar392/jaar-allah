@@ -69,6 +69,9 @@
                                                         @if($model == 'abouts')
                                                         <?php $actions = ['read', 'update']; ?>
                                                         @endif
+                                                        @if($model == 'counters')
+                                                        <?php $actions = ['read', 'update']; ?>
+                                                        @endif
                                                         <tr>
                                                             <td>{{$index+1}}</td>
                                                             <td>{{__('web.'.$model)}}</td>

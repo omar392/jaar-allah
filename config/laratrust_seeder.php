@@ -30,6 +30,7 @@ return [
             'seos'=>  'r,u',
             'settings' => 'r,u',
             'abouts' => 'r,u',
+            'counters' => 'r,u',
             
         ]
 

@@ -103,6 +103,13 @@
                             </a>
                         </li>
                         @endif
+                        @if(Auth::guard('admin')->user()->hasPermission('counters-read'))
+                        <li>
+                            <a href="{{route('counter')}}" class="waves-effect">
+                                <i class="fas fa-sort-amount-down"></i><span style="font-family: cairo;">الاحصائيات</span>
+                            </a>
+                        </li>
+                        @endif
                         @if(Auth::guard('admin')->user()->hasPermission('seos-read'))
                         <li>
                             <a href="{{route('seo')}}" class="waves-effect">
