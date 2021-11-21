@@ -103,8 +103,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle">Pages <i
-                                    class='bx bx-chevron-down'></i></a>
+                            <a href="#" class="nav-link dropdown-toggle">Pages <i class='bx bx-chevron-down'></i></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link dropdown-toggle">Users <i
@@ -157,8 +156,7 @@
                             <a href="about.html" class="nav-link">About</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle">Services <i
-                                    class='bx bx-chevron-down'></i></a>
+                            <a href="#" class="nav-link dropdown-toggle">Services <i class='bx bx-chevron-down'></i></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
                                     <a href="services.html" class="nav-link">Services</a>
@@ -169,8 +167,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle">Projects <i
-                                    class='bx bx-chevron-down'></i></a>
+                            <a href="#" class="nav-link dropdown-toggle">Projects <i class='bx bx-chevron-down'></i></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
                                     <a href="projects.html" class="nav-link">Projects</a>
@@ -210,25 +207,25 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="dropdown nav-flag-dropdown">
-                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="{{ asset('frontend/assets/img/flag1.jpg') }}" alt="Flag">
-                                Eng
-                                <i class='bx bx-chevron-down'></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">
-                                    <img src="{{ asset('frontend/assets/img/flag2.jpg') }}" alt="Flag"> Ger
+                        @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            @if ($localeCode == LaravelLocalization::getCurrentLocale())
+                            @elseif($url = LaravelLocalization::getLocalizedURL($localeCode))
+                                <a href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    @if (app()->getLocale() == 'ar')
+                                        <img src="{{ asset('frontend/assets/img/flag1.jpg') }}" alt="Flag">
+                                        <span style="color: #FFF">Eng</span>
+                                    @else
+                                        <img src="{{ asset('frontend/assets/img/kuw.png') }}"
+                                            style="width: 40px;height: 20px;" alt="Flag">
+                                        <span style="color: #FFF">العربية</span>
+                                    @endif
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    <img src="{{ asset('frontend/assets/img/flag4.jpg') }}" alt="Flag"> USA
-                                </a>
-                            </div>
-                        </div>
+                            @endif
+                        @endforeach
                     </div>
                 </div>
-            </nav>
         </div>
+        </nav>
     </div>
+</div>
 </div>

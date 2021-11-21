@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}">
 
 
     @include('frontend.layouts.head')

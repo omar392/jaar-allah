@@ -47,7 +47,7 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-7">
                                     <div class="banner-content">
-                                        <h1>الشركات الكبرى</h1>
+                                        <h1 style="font-family: tajawal">الشركات الكبرى</h1>
                                         <p>Lorem Ipsum is هنا الشركات الكبرىtting industry. Lorem Ipsum has been the
                                             industry's standard dummy when an unknown printer</p>
                                         <a class="common-btn three" href="#">
