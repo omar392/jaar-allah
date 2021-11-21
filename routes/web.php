@@ -3,6 +3,7 @@
 use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,13 @@ Auth::routes([
 // 'login'=>false,
 ]);
 
-Route::get('/',[HomeController::class,'index'])->name('website');
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+    ], function(){ 
+        Route::get('/',[HomeController::class,'index'])->name('website');
+    });
