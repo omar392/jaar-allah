@@ -1,263 +1,6 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.rtl.min.css')}}">
-
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/boxicons.min.css')}}">
-
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/meanmenu.css')}}">
-
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/animate.min.css')}}">
-
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.theme.default.min.css')}}">
-
-    <link rel="stylesheet" href="{{asset('frontend/assets/fonts/flaticon.css')}}">
-
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/modal-video.min.css')}}">
-
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/odometer.min.css')}}">
-
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
-
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}">
-
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/rtl.css')}}">
-    <title>Inva - Finance and Investment HTML Template</title>
-    <link rel="icon" type="image/png" href="{{asset('frontend/assets/img/favicon.png')}}">
-</head>
-
-<body>
-
-    <div class="loader">
-        <div class="d-table">
-            <div class="d-table-cell">
-                <div class="pre-load">
-                    <div class="inner one"></div>
-                    <div class="inner two"></div>
-                    <div class="inner three"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="header-area three">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-9 col-lg-8">
-                    <div class="left">
-                        <ul>
-                            <li>
-                                <i class='bx bx-mail-send'></i>
-                                <a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#fb939e979794bb92958d9ad5989496"><span class="__cf_email__" data-cfemail="ddb5b8b1b1b29db4b3abbcf3beb2b0">[email&#160;protected]</span></a>
-                            </li>
-                            <li>
-                                <i class='bx bx-phone-call'></i>
-                                <a href="tel:+99084211703">+990-8421-1703</a>
-                            </li>
-                            <li>
-                                <i class='bx bx-time'></i>
-                                <span>Mon - Sat: 8:00 AM - 7:00 PM</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-lg-4">
-                    <div class="right">
-                        <ul>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-facebook'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-twitter'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-youtube'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-instagram'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bxl-twitter'></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="navbar-area sticky-top">
-
-        <div class="mobile-nav">
-            <a href="index.html" class="logo">
-                <img src="{{asset('frontend/assets/img/logo-four.png')}}" alt="Logo">
-            </a>
-        </div>
-
-        <div class="main-nav three">
-            <div class="container">
-                <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="{{asset('frontend/assets/img/logo-four.png')}}" alt="Logo">
-                    </a>
-                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link dropdown-toggle active">الرئيسية<i class='bx bx-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="index.html" class="nav-link">Home Demo One</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="index-2.html" class="nav-link">Home Demo Two</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="index-3.html" class="nav-link active">Home Demo Three</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link dropdown-toggle">Pages <i class='bx bx-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link dropdown-toggle">Users <i class='bx bx-chevron-down'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="sign-in.html" class="nav-link">Sign In</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="sign-up.html" class="nav-link">Sign Up</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link dropdown-toggle">Team <i class='bx bx-chevron-down'></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="team.html" class="nav-link">Team</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="team-details.html" class="nav-link">Team Details</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="Pricing.html" class="nav-link">Pricing</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="testimonials.html" class="nav-link">Testimonials</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="faq.html" class="nav-link">FAQ</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="404.html" class="nav-link">404 Error Page</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="coming-soon.html" class="nav-link">Coming Soon</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="terms-conditions.html" class="nav-link">Terms & Conditions</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="about.html" class="nav-link">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link dropdown-toggle">Services <i class='bx bx-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="services.html" class="nav-link">Services</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="service-details.html" class="nav-link">Service Details</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link dropdown-toggle">Projects <i class='bx bx-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="projects.html" class="nav-link">Projects</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="project-details.html" class="nav-link">Project Details</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link dropdown-toggle">Blog <i class='bx bx-chevron-down'></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="blog.html" class="nav-link">Blog</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="blog-details.html" class="nav-link">Blog Details</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="contact.html" class="nav-link">Contact</a>
-                            </li>
-                        </ul>
-                        <div class="side-nav">
-                            <div class="nav-search">
-                                <i id="search-btn" class="bx bx-search-alt"></i>
-                                <div id="search-overlay" class="block">
-                                    <div class="centered">
-                                        <div id="search-box">
-                                            <i id="close-btn" class="bx bx-x"></i>
-                                            <form>
-                                                <input type="text" class="form-control" placeholder="Search..." />
-                                                <button type="submit" class="btn">Search</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dropdown nav-flag-dropdown">
-                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-<img src="{{asset('frontend/assets/img/flag1.jpg')}}" alt="Flag">
-Eng
-<i class='bx bx-chevron-down'></i>
-</button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">
-                                        <img src="{{asset('frontend/assets/img/flag2.jpg')}}" alt="Flag"> Ger
-                                    </a>
-                                    <a class="dropdown-item" href="#">
-                                        <img src="{{asset('frontend/assets/img/flag4.jpg')}}" alt="Flag"> USA
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
+@extends('frontend.layouts.master')
+@section('content')
+    
 
 
     <div class="banner-area three">
@@ -270,18 +13,23 @@ Eng
                                 <div class="col-lg-7">
                                     <div class="banner-content">
                                         <h1>Achieve Your Desired Success With Us</h1>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy when an unknown printer</p>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry's standard dummy when an unknown printer
+                                        </p>
                                         <a class="common-btn three" href="#">
-Let's Start Now
-<span></span>
-</a>
+                                            Let's Start Now
+                                            <span></span>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="col-lg-5">
                                     <div class="banner-img">
-                                        <img src="{{asset('frontend/assets/img/banner/banner-main2.jpg')}}" alt="Banner">
-                                        <img src="{{asset('frontend/assets/img/banner/banner-shape3.png')}}" alt="Banner">
-                                        <img src="{{asset('frontend/assets/img/banner/banner-shape2.png')}}" alt="Shape">
+                                        <img src="{{ asset('frontend/assets/img/banner/banner-main2.jpg') }}"
+                                            alt="Banner">
+                                        <img src="{{ asset('frontend/assets/img/banner/banner-shape3.png') }}"
+                                            alt="Banner">
+                                        <img src="{{ asset('frontend/assets/img/banner/banner-shape2.png') }}"
+                                            alt="Shape">
                                     </div>
                                 </div>
                             </div>
@@ -300,18 +48,22 @@ Let's Start Now
                                 <div class="col-lg-7">
                                     <div class="banner-content">
                                         <h1>الشركات الكبرى</h1>
-                                        <p>Lorem Ipsum is هنا الشركات الكبرىtting industry. Lorem Ipsum has been the industry's standard dummy when an unknown printer</p>
+                                        <p>Lorem Ipsum is هنا الشركات الكبرىtting industry. Lorem Ipsum has been the
+                                            industry's standard dummy when an unknown printer</p>
                                         <a class="common-btn three" href="#">
-Let's Start Now
-<span></span>
-</a>
+                                            Let's Start Now
+                                            <span></span>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="col-lg-5">
                                     <div class="banner-img">
-                                        <img src="{{asset('frontend/assets/img/banner/banner-main3.jpg')}}" alt="Banner">
-                                        <img src="{{asset('frontend/assets/img/banner/banner-shape3.png')}}" alt="Banner">
-                                        <img src="{{asset('frontend/assets/img/banner/banner-shape2.png')}}" alt="Shape">
+                                        <img src="{{ asset('frontend/assets/img/banner/banner-main3.jpg') }}"
+                                            alt="Banner">
+                                        <img src="{{ asset('frontend/assets/img/banner/banner-shape3.png') }}"
+                                            alt="Banner">
+                                        <img src="{{ asset('frontend/assets/img/banner/banner-shape2.png') }}"
+                                            alt="Shape">
                                     </div>
                                 </div>
                             </div>
@@ -330,18 +82,23 @@ Let's Start Now
                                 <div class="col-lg-7">
                                     <div class="banner-content">
                                         <h1>Get Engage In Profitable Business</h1>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy when an unknown printer</p>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry's standard dummy when an unknown printer
+                                        </p>
                                         <a class="common-btn three" href="#">
-Let's Start Now
-<span></span>
-</a>
+                                            Let's Start Now
+                                            <span></span>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="col-lg-5">
                                     <div class="banner-img">
-                                        <img src="{{asset('frontend/assets/img/banner/banner-main4.jpg')}}" alt="Banner">
-                                        <img src="{{asset('frontend/assets/img/banner/banner-shape3.png')}}" alt="Banner">
-                                        <img src="{{asset('frontend/assets/img/banner/banner-shape2.png')}}" alt="Shape">
+                                        <img src="{{ asset('frontend/assets/img/banner/banner-main4.jpg') }}"
+                                            alt="Banner">
+                                        <img src="{{ asset('frontend/assets/img/banner/banner-shape3.png') }}"
+                                            alt="Banner">
+                                        <img src="{{ asset('frontend/assets/img/banner/banner-shape2.png') }}"
+                                            alt="Shape">
                                     </div>
                                 </div>
                             </div>
@@ -354,7 +111,7 @@ Let's Start Now
             </div>
         </div>
         <div class="banner-shape">
-            <img src="{{asset('frontend/assets/img/banner/banner-shape4.png')}}" alt="Shape">
+            <img src="{{ asset('frontend/assets/img/banner/banner-shape4.png') }}" alt="Shape">
         </div>
     </div>
 
@@ -365,17 +122,18 @@ Let's Start Now
                 <div class="col-sm-6 col-lg-4">
                     <div class="section-title three">
                         <h2>Our Dedicated Top <span>Features</span> For Your Satisfaction</h2>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadip ng elitr, sed diam nonumy eirmod tempor invi dunt ut labore</p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadip ng elitr, sed diam nonumy eirmod tempor invi
+                            dunt ut labore</p>
                         <a class="common-btn three" href="services.html">
-Explore All Features
-<span></span>
-</a>
+                            Explore All Features
+                            <span></span>
+                        </a>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4">
                     <div class="features-item">
                         <div class="top">
-                            <img src="{{asset('frontend/assets/img/features1.jpg')}}" alt="Features">
+                            <img src="{{ asset('frontend/assets/img/features1.jpg') }}" alt="Features">
                         </div>
                         <div class="bottom">
                             <h3>24/7 Support</h3>
@@ -385,7 +143,7 @@ Explore All Features
                 <div class="col-sm-6 col-lg-4">
                     <div class="features-item">
                         <div class="top">
-                            <img src="{{asset('frontend/assets/img/features2.jpg')}}" alt="Features">
+                            <img src="{{ asset('frontend/assets/img/features2.jpg') }}" alt="Features">
                         </div>
                         <div class="bottom">
                             <h3>Lifetime Support</h3>
@@ -435,7 +193,7 @@ Explore All Features
 
     <section class="about-area two three pt-100 pb-70">
         <div class="about-shape">
-            <img src="assets/img/about/about-shape1.png" alt="Shape">
+            <img src="{{asset('frontend/assets/img/about/about-shape1.png')}}" alt="Shape">
         </div>
         <div class="container-fluid">
             <div class="row align-items-center">
@@ -443,10 +201,12 @@ Explore All Features
                     <div class="about-img">
                         <div class="row">
                             <div class="col-sm-6 col-lg-6">
-                                <img class="about-long" src="{{asset('frontend/assets/img/about/about4.jpg')}}" alt="About">
+                                <img class="about-long" src="{{ asset('frontend/assets/img/about/about4.jpg') }}"
+                                    alt="About">
                             </div>
                             <div class="col-sm-6 col-lg-6">
-                                <img class="about-long-two" src="{{asset('frontend/assets/img/about/about5.jpg')}}" alt="About">
+                                <img class="about-long-two" src="{{ asset('frontend/assets/img/about/about5.jpg') }}"
+                                    alt="About">
                             </div>
                         </div>
                         <div class="years">
@@ -458,9 +218,12 @@ Explore All Features
                     <div class="about-content">
                         <div class="section-title three">
                             <h2>We Are A Trusted Company With <span>25+</span> Years Of Experience</h2>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna.</p>
                         </div>
-                        <p class="about-p">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+                        <p class="about-p">It is a long established fact that a reader will be distracted by the
+                            readable content of a page when looking at its layout. The point of using Lorem Ipsum is
+                            that it has a more-or-less normal distribution of letters</p>
                         <div class="row">
                             <div class="col-sm-6 col-lg-6">
                                 <ul>
@@ -508,9 +271,9 @@ Explore All Features
                             </div>
                         </div>
                         <a class="common-btn three" href="#">
-Explore About Us
-<span></span>
-</a>
+                            Explore About Us
+                            <span></span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -522,7 +285,8 @@ Explore About Us
         <div class="container">
             <div class="section-title three">
                 <h2>The <span>Services</span> That We Provide</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis libero facilis consequatur deleniti, ipsa provident? Culpa tenetur incidunt reprehenderit qui a voluptas</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis libero facilis consequatur
+                    deleniti, ipsa provident? Culpa tenetur incidunt reprehenderit qui a voluptas</p>
             </div>
             <div class="row">
                 <div class="col-sm-6 col-lg-4">
@@ -531,7 +295,8 @@ Explore About Us
                         <h3>
                             <a href="service-details.html">Business Strategy</a>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor invidunt ut labore et dolore magna</p>
+                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor
+                            invidunt ut labore et dolore magna</p>
                         <a class="services-btn" href="service-details.html">Read More</a>
                     </div>
                 </div>
@@ -541,7 +306,8 @@ Explore About Us
                         <h3>
                             <a href="service-details.html">Investment Planning</a>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor invidunt ut labore et dolore magna</p>
+                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor
+                            invidunt ut labore et dolore magna</p>
                         <a class="services-btn" href="service-details.html">Read More</a>
                     </div>
                 </div>
@@ -551,7 +317,8 @@ Explore About Us
                         <h3>
                             <a href="service-details.html">Project Management</a>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor invidunt ut labore et dolore magna</p>
+                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor
+                            invidunt ut labore et dolore magna</p>
                         <a class="services-btn" href="service-details.html">Read More</a>
                     </div>
                 </div>
@@ -561,7 +328,8 @@ Explore About Us
                         <h3>
                             <a href="service-details.html">Financial Analysis</a>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor invidunt ut labore et dolore magna</p>
+                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor
+                            invidunt ut labore et dolore magna</p>
                         <a class="services-btn" href="service-details.html">Read More</a>
                     </div>
                 </div>
@@ -571,7 +339,8 @@ Explore About Us
                         <h3>
                             <a href="service-details.html">Audit & Evaluation</a>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor invidunt ut labore et dolore magna</p>
+                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor
+                            invidunt ut labore et dolore magna</p>
                         <a class="services-btn" href="service-details.html">Read More</a>
                     </div>
                 </div>
@@ -581,7 +350,8 @@ Explore About Us
                         <h3>
                             <a href="service-details.html">Support & Maintain</a>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor invidunt ut labore et dolore magna</p>
+                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor
+                            invidunt ut labore et dolore magna</p>
                         <a class="services-btn" href="service-details.html">Read More</a>
                     </div>
                 </div>
@@ -592,13 +362,14 @@ Explore About Us
 
     <div class="skills-area ptb-100">
         <div class="skills-img">
-            <img src="{{asset('frontend/assets/img/skills-main.png')}}" alt="Skills">
+            <img src="{{ asset('frontend/assets/img/skills-main.png') }}" alt="Skills">
         </div>
         <div class="container">
             <div class="skills-content">
                 <div class="section-title three">
                     <h2>We Also Show The Final Result In <span>Stats</span> For Your Better Understanding</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis libero facilis consequatur deleniti, ipsa provident? Culpa tenetur incidunt reprehenderit qui a voluptas</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis libero facilis consequatur
+                        deleniti, ipsa provident? Culpa tenetur incidunt reprehenderit qui a voluptas</p>
                 </div>
                 <div class="skill-wrap">
                     <div class="skill">
@@ -636,23 +407,28 @@ Explore About Us
                         <ul class="accordion">
                             <li>
                                 <a>How does Inva help in business investment permanently?</a>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipsci ng elitr, sed dia mi nonumy eirmod tempor invi dunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipsci ng elitr, sed dia mi nonumy eirmod
+                                    tempor invi dunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
                             </li>
                             <li>
                                 <a>How does Inva help in business growth?</a>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipsci ng elitr, sed dia mi nonumy eirmod tempor invi dunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipsci ng elitr, sed dia mi nonumy eirmod
+                                    tempor invi dunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
                             </li>
                             <li>
                                 <a>How does Inva help to gain financial goal?</a>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipsci ng elitr, sed dia mi nonumy eirmod tempor invi dunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipsci ng elitr, sed dia mi nonumy eirmod
+                                    tempor invi dunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
                             </li>
                             <li>
                                 <a>Can I get financial investment from Inva without interest?</a>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipsci ng elitr, sed dia mi nonumy eirmod tempor invi dunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipsci ng elitr, sed dia mi nonumy eirmod
+                                    tempor invi dunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
                             </li>
                             <li>
                                 <a>How does Inva take role in business partnership?</a>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipsci ng elitr, sed dia mi nonumy eirmod tempor invi dunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipsci ng elitr, sed dia mi nonumy eirmod
+                                    tempor invi dunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
                             </li>
                         </ul>
                     </div>
@@ -704,13 +480,14 @@ Explore About Us
 
     <section class="pricing-area three pt-100 pb-70">
         <div class="pricing-shape">
-            <img src="{{asset('frontend/assets/img/pricing-shape1.png')}}" alt="Shape">
-            <img src="{{asset('frontend/assets/img/pricing-shape1.png')}}" alt="Shape">
+            <img src="{{ asset('frontend/assets/img/pricing-shape1.png') }}" alt="Shape">
+            <img src="{{ asset('frontend/assets/img/pricing-shape1.png') }}" alt="Shape">
         </div>
         <div class="container">
             <div class="section-title three">
                 <h2>Affordable Pricing Plans</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis libero facilis consequatur deleniti, ipsa provident? Culpa tenetur incidunt reprehenderit qui a voluptas</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis libero facilis consequatur
+                    deleniti, ipsa provident? Culpa tenetur incidunt reprehenderit qui a voluptas</p>
             </div>
             <div class="row align-items-center">
                 <div class="col-sm-6 col-lg-4">
@@ -725,9 +502,9 @@ Explore About Us
                             <li class="deleted">24/7 Hours Support</li>
                         </ul>
                         <a class="common-btn three" href="#">
-Purchase Now
-<span></span>
-</a>
+                            Purchase Now
+                            <span></span>
+                        </a>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4">
@@ -742,9 +519,9 @@ Purchase Now
                             <li>24/7 Hours Support</li>
                         </ul>
                         <a class="common-btn three" href="#">
-Purchase Now
-<span></span>
-</a>
+                            Purchase Now
+                            <span></span>
+                        </a>
                     </div>
                 </div>
                 <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-4">
@@ -759,9 +536,9 @@ Purchase Now
                             <li>24/7 Hours Support</li>
                         </ul>
                         <a class="common-btn three" href="#">
-Purchase Now
-<span></span>
-</a>
+                            Purchase Now
+                            <span></span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -773,13 +550,14 @@ Purchase Now
         <div class="container">
             <div class="section-title three">
                 <h2>Meet Our Awesome <span>Team Members</span></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis libero facilis consequatur deleniti, ipsa provident? Culpa tenetur incidunt reprehenderit qui a voluptas</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis libero facilis consequatur
+                    deleniti, ipsa provident? Culpa tenetur incidunt reprehenderit qui a voluptas</p>
             </div>
             <div class="row">
                 <div class="col-sm-6 col-lg-4">
                     <div class="team-item">
                         <div class="top">
-                            <img src="{{asset('frontend/assets/img/team/team1.jpg')}}" alt="Team">
+                            <img src="{{ asset('frontend/assets/img/team/team1.jpg') }}" alt="Team">
                         </div>
                         <div class="bottom">
                             <ul>
@@ -809,7 +587,7 @@ Purchase Now
                 <div class="col-sm-6 col-lg-4">
                     <div class="team-item">
                         <div class="top">
-                            <img src="{{asset('frontend/assets/img/team/team2.jpg')}}" alt="Team">
+                            <img src="{{ asset('frontend/assets/img/team/team2.jpg') }}" alt="Team">
                         </div>
                         <div class="bottom">
                             <ul>
@@ -839,7 +617,7 @@ Purchase Now
                 <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-4">
                     <div class="team-item">
                         <div class="top">
-                            <img src="{{asset('frontend/assets/img/team/team3.jpg')}}" alt="Team">
+                            <img src="{{ asset('frontend/assets/img/team/team3.jpg') }}" alt="Team">
                         </div>
                         <div class="bottom">
                             <ul>
@@ -869,9 +647,9 @@ Purchase Now
             </div>
             <div class="text-center">
                 <a class="common-btn three" href="team.html">
-All Members
-<span></span>
-</a>
+                    All Members
+                    <span></span>
+                </a>
             </div>
         </div>
     </section>
@@ -879,15 +657,16 @@ All Members
 
     <section class="testimonials-area three ptb-100">
         <div class="testimonials-shape">
-            <img src="{{asset('frontend/assets/img/testimonials-shape2.png')}}" alt="Shape">
-            <img src="{{asset('frontend/assets/img/testimonials-shape3.png')}}" alt="Shape">
+            <img src="{{ asset('frontend/assets/img/testimonials-shape2.png') }}" alt="Shape">
+            <img src="{{ asset('frontend/assets/img/testimonials-shape3.png') }}" alt="Shape">
         </div>
         <div class="container">
             <div class="testimonials-slider owl-theme owl-carousel">
                 <div class="testimonials-item">
                     <i class='bx bxs-quote-right icon'></i>
-                    <p>Inva is excellent in their work and I really amazed to see how they managed everything throughout the year without any problem. They has an excellent sense of finance & economy.</p>
-                    <img src="assets/img/testimonials1.jpg" alt="Testimonials">
+                    <p>Inva is excellent in their work and I really amazed to see how they managed everything throughout
+                        the year without any problem. They has an excellent sense of finance & economy.</p>
+                    <img src="{{asset('frontend/assets/img/testimonials1.jpg')}}" alt="Testimonials">
                     <h3>Tom Henry</h3>
                     <span>CEO of Company</span>
                     <ul>
@@ -910,8 +689,9 @@ All Members
                 </div>
                 <div class="testimonials-item">
                     <i class='bx bxs-quote-right icon'></i>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less.</p>
-                    <img src="{{asset('frontend/assets/img/testimonials2.jpg')}}" alt="Testimonials">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less.</p>
+                    <img src="{{ asset('frontend/assets/img/testimonials2.jpg') }}" alt="Testimonials">
                     <h3>Jac Jacson</h3>
                     <span>Director</span>
                     <ul>
@@ -934,8 +714,9 @@ All Members
                 </div>
                 <div class="testimonials-item">
                     <i class='bx bxs-quote-right icon'></i>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
-                    <img src="{{asset('frontend/assets/img/testimonials3.jpg')}}" alt="Testimonials">
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words.</p>
+                    <img src="{{ asset('frontend/assets/img/testimonials3.jpg') }}" alt="Testimonials">
                     <h3>Micheal Shon</h3>
                     <span>Manager</span>
                     <ul>
@@ -963,177 +744,26 @@ All Members
 
     <section class="subscribe-area three ptb-100">
         <div class="subscribe-img">
-            <img src="{{asset('frontend/assets/img/subscribe-main2.png')}}" alt="Subscribe">
+            <img src="{{ asset('frontend/assets/img/subscribe-main2.png') }}" alt="Subscribe">
         </div>
         <div class="container">
             <div class="subscribe-wrap">
                 <div class="section-title two">
                     <h2>Subscribe Our Newsletter</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis libero facilis consequatur deleniti, ipsa provident? Culpa tenetur incidunt</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis libero facilis consequatur
+                        deleniti, ipsa provident? Culpa tenetur incidunt</p>
                 </div>
                 <form class="newsletter-form" data-toggle="validator">
-                    <input type="email" class="form-control" placeholder="Enter Your Email" name="EMAIL" required autocomplete="off">
+                    <input type="email" class="form-control" placeholder="Enter Your Email" name="EMAIL" required
+                        autocomplete="off">
                     <button class="btn common-btn three" type="submit">
-Subscribe
-<span></span>
-</button>
+                        Subscribe
+                        <span></span>
+                    </button>
                     <div id="validator-newsletter" class="form-result"></div>
                 </form>
             </div>
         </div>
     </section>
 
-
-    <footer class="footer-area two three pt-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-lg-3">
-                    <div class="footer-item">
-                        <div class="footer-logo">
-                            <a class="footer-inva" href="index.html">
-                                <img src="{{asset('frontend/assets/img/logo-three.png')}}" alt="Logo">
-                            </a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quaerat quo unde</p>
-                            <ul>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bxl-facebook'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bxl-twitter'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bxl-linkedin'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bxl-instagram'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bxl-youtube'></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="footer-item">
-                        <div class="footer-link">
-                            <h3>Important Links</h3>
-                            <ul>
-                                <li>
-                                    <i class='bx bx-chevron-right'></i>
-                                    <a href="about.html">About</a>
-                                </li>
-                                <li>
-                                    <i class='bx bx-chevron-right'></i>
-                                    <a href="services.html">Services</a>
-                                </li>
-                                <li>
-                                    <i class='bx bx-chevron-right'></i>
-                                    <a href="projects.html">Projects</a>
-                                </li>
-                                <li>
-                                    <i class='bx bx-chevron-right'></i>
-                                    <a href="blog.html">Blog</a>
-                                </li>
-                                <li>
-                                    <i class='bx bx-chevron-right'></i>
-                                    <a href="faq.html">FAQ</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="footer-item">
-                        <div class="footer-hours">
-                            <h3>Open Hours</h3>
-                            <ul>
-                                <li>Monday <span>8:00 - 21:00</span></li>
-                                <li>Tuesday <span>8:00 - 21:00</span></li>
-                                <li>Wednesday <span>8:00 - 21:00</span></li>
-                                <li>Thursday <span>8:00 - 21:00</span></li>
-                                <li>Sunday <span>8:00 - 21:00</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="footer-item">
-                        <div class="footer-contact">
-                            <h3>Contact Info</h3>
-                            <ul>
-                                <li>
-                                    <i class='bx bxs-location-plus'></i>
-                                    <span>113 Inva, White House, New Jercy, USA</span>
-                                </li>
-                                <li>
-                                    <i class='bx bxs-phone-call'></i>
-                                    <a href="tel:+0015481592491">+001-548-159-2491</a>
-                                    <a href="tel:+0017581458652">+001-758-145-8652</a>
-                                </li>
-                                <li>
-                                    <i class='bx bxs-paper-plane'></i>
-                                    <a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#6b030e0707042b02051d0a45080406"><span class="__cf_email__" data-cfemail="6d05080101022d04031b0c430e0200">[email&#160;protected]</span></a>
-                                    <a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#553c3b333a153c3b23347b363a38"><span class="__cf_email__" data-cfemail="e881868e87a881869e89c68b8785">[email&#160;protected]</span></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright-area">
-            <div class="container">
-                <p>Copyright ©2021 Designed By <a href="https://greenwayim.com" target="_blank">Green Way</a></p>
-            </div>
-        </div>
-        <div class="footer-shape">
-            <img src="{{asset('frontend/assets/img/footer-bg2.png')}}" alt="Footer">
-        </div>
-    </footer>
-
-
-    <div class="go-top">
-        <i class="bx bxs-up-arrow-alt"></i>
-        <i class="bx bxs-up-arrow-alt"></i>
-    </div>
-
-
-    <script data-cfasync="false" src="{{asset('frontend/assets/js/email-decode.min.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/jquery.min.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/popper.min.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/bootstrap.min.js')}}"></script>
-
-    <script src="{{asset('frontend/assets/js/form-validator.min.js')}}"></script>
-
-    <script src="{{asset('frontend/assets/js/contact-form-script.js')}}"></script>
-
-    <script src="{{asset('frontend/assets/js/jquery.ajaxchimp.min.js')}}"></script>
-
-    <script src="{{asset('frontend/assets/js/jquery.meanmenu.js')}}"></script>
-
-    <script src="{{asset('frontend/assets/js/wow.min.js')}}"></script>
-
-    <script src="{{asset('frontend/assets/js/owl.carousel.min.js')}}"></script>
-
-    <script src="{{asset('frontend/assets/js/jquery-modal-video.min.js')}}"></script>
-
-    <script src="{{asset('frontend/assets/js/odometer.min.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/jquery.appear.min.js')}}"></script>
-
-    <script src="{{asset('frontend/assets/js/smoothscroll.min.js')}}"></script>
-
-    <script src="{{asset('frontend/assets/js/custom.js')}}"></script>
-</body>
-
-</html>
+    @endsection
