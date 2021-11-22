@@ -43,5 +43,8 @@ Route::group(
     ], function(){ 
         Route::get('/',[HomeController::class,'index'])->name('website');
         Route::get('contact-us',[HomeController::class,'contactUs'])->name('contact.us');
+        Route::post('/submit-form',[HomeController::class,'store'])->name('contact.store');
         Route::get('faqs',[HomeController::class,'faqs'])->name('front.faqs');
+        Route::get('about-us',[HomeController::class,'aboutUs'])->name('front.about');
+        Route::get('our-team',[HomeController::class,'team'])->name('front.team');
     });

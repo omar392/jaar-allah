@@ -8,6 +8,7 @@ use App\Models\Counter;
 use App\Models\Faq;
 use App\Models\Seo;
 use App\Models\Setting;
+use App\Models\Team;
 use Illuminate\Http\Request;
 use PHPUnit\Framework\Constraint\Count;
 
@@ -39,5 +40,22 @@ class HomeController extends Controller
         $data['counter'] = Counter::first();
         $data['faqs'] = Faq::where(['status'=>'active'])->get();
         return view('frontend.faqs.index',$data);
+    }
+    public function aboutUs()
+    {
+        $data['seo'] = Seo::first();
+        $data['settings'] = Setting::first();
+        $data['about'] = About::first();
+        $data['counter'] = Counter::first();
+        return view('frontend.about.index',$data);
+    }
+    public function team()
+    {
+        $data['seo'] = Seo::first();
+        $data['settings'] = Setting::first();
+        $data['about'] = About::first();
+        $data['counter'] = Counter::first();
+        $data['team'] = Team::where(['status'=>'active'])->get();
+        return view('frontend.team.index',$data);
     }
 }

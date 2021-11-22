@@ -83,7 +83,7 @@
                             <a href="{{route('website')}}" class="nav-link {{ URL::route('website') === URL::current() ? 'active' : ''}}">{{__('website.home')}}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="about.html" class="nav-link">{{__('website.about')}}</a>
+                            <a href="{{route('front.about')}}" class="nav-link {{ URL::route('front.about') === URL::current() ? 'active' : ''}}">{{__('website.about')}}</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">{{__('website.services')}}</a>
@@ -92,10 +92,13 @@
                             <a href="#" class="nav-link">{{__('website.blog')}}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle">{{__('website.pages')}} <i class='bx bx-chevron-down'></i></a>
+                            <a href="#" class="nav-link dropdown-toggle {{ URL::route('front.faqs') === URL::current() ? 'active' : ''}} {{ URL::route('front.team') === URL::current() ? 'active' : ''}}">{{__('website.pages')}} <i class='bx bx-chevron-down'></i></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a href="blog.html" class="nav-link">Blog</a>
+                                    <a href="{{route('front.faqs')}}" class="nav-link {{ URL::route('front.faqs') === URL::current() ? 'active' : ''}}">{{__('website.faqs')}}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{route('front.team')}}" class="nav-link {{ URL::route('front.team') === URL::current() ? 'active' : ''}}">{{__('website.team')}}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="blog-details.html" class="nav-link">Blog Details</a>

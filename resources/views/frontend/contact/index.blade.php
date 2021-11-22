@@ -40,7 +40,7 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <input type="text" name="name" id="name" class="form-control" placeholder="Name"
-                                        required data-error="Please enter your name">
+                                        required>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
