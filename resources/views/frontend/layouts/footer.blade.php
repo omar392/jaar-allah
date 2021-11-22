@@ -8,30 +8,30 @@
                             <a class="footer-inva" href="index.html">
                                 <img src="{{ asset('frontend/assets/img/logo-three.png') }}" alt="Logo">
                             </a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quaerat quo unde</p>
+                            <p>{{$about->about}}</p>
                             <ul>
                                 <li>
-                                    <a href="#" target="_blank">
+                                    <a href="{{$settings->facebook}}" target="_blank">
                                         <i class='bx bxl-facebook'></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank">
+                                    <a href="{{$settings->twitter}}" target="_blank">
                                         <i class='bx bxl-twitter'></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank">
+                                    <a href="{{$settings->linkedin}}" target="_blank">
                                         <i class='bx bxl-linkedin'></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank">
+                                    <a href="{{$settings->instagram}}" target="_blank">
                                         <i class='bx bxl-instagram'></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank">
+                                    <a href="{{$settings->youtube}}" target="_blank">
                                         <i class='bx bxl-youtube'></i>
                                     </a>
                                 </li>
@@ -46,23 +46,19 @@
                             <ul>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
-                                    <a href="about.html">About</a>
+                                    <a href="about.html">{{__('website.about')}}</a>
                                 </li>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
-                                    <a href="services.html">Services</a>
+                                    <a href="services.html">{{__('website.services')}}</a>
                                 </li>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
-                                    <a href="projects.html">Projects</a>
+                                    <a href="blog.html">{{__('website.blog')}}</a>
                                 </li>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
-                                    <a href="blog.html">Blog</a>
-                                </li>
-                                <li>
-                                    <i class='bx bx-chevron-right'></i>
-                                    <a href="faq.html">FAQ</a>
+                                    <a href="{{route('front.faqs')}}">{{__('website.faqs')}}</a>
                                 </li>
                             </ul>
                         </div>
@@ -85,27 +81,19 @@
                 <div class="col-sm-6 col-lg-3">
                     <div class="footer-item">
                         <div class="footer-contact">
-                            <h3>Contact Info</h3>
+                            <h3 style="font-family: tajawal">{{__('website.continfo')}}</h3>
                             <ul>
                                 <li>
                                     <i class='bx bxs-location-plus'></i>
-                                    <span>113 Inva, White House, New Jercy, USA</span>
+                                    <span>{{$settings->address}}</span>
                                 </li>
                                 <li>
                                     <i class='bx bxs-phone-call'></i>
-                                    <a href="tel:+0015481592491">+001-548-159-2491</a>
-                                    <a href="tel:+0017581458652">+001-758-145-8652</a>
+                                    <a href="tel:{{$settings->phone}}">{{$settings->phone}}</a>
                                 </li>
                                 <li>
                                     <i class='bx bxs-paper-plane'></i>
-                                    <a
-                                        href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#6b030e0707042b02051d0a45080406"><span
-                                            class="__cf_email__"
-                                            data-cfemail="6d05080101022d04031b0c430e0200">[email&#160;protected]</span></a>
-                                    <a
-                                        href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#553c3b333a153c3b23347b363a38"><span
-                                            class="__cf_email__"
-                                            data-cfemail="e881868e87a881869e89c68b8785">[email&#160;protected]</span></a>
+                                    <a><span>{{$settings->email}}</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -113,9 +101,9 @@
                 </div>
             </div>
         </div>
-        <div class="copyright-area">
+        <div class="copyright-area" dir="ltr">
             <div class="container">
-                <p>Copyright ©2021 Designed By <a href="https://greenwayim.com" target="_blank">Green Way</a></p>
+                <p>© {{ now()->year }} Designed  & Developed By <a href="https://greenwayim.com" target="_blank">Green Way</a></p>
             </div>
         </div>
         <div class="footer-shape">

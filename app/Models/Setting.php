@@ -21,4 +21,11 @@ class Setting extends Model
         'address_ar',
         'address_en',
     ];
+    public function getAddressAttribute()
+    {
+        if (app()->getLocale() == 'ar') {
+            return $this->address_ar;
+        }
+        return $this->address_en;
+    }
 }

@@ -16,4 +16,25 @@ class About extends Model
         'vision_ar',
         'vision_en',
     ];
+    public function getAboutAttribute()
+    {
+        if (app()->getLocale() == 'ar') {
+            return $this->about_ar;
+        }
+        return $this->about_en;
+    }
+    public function getMissionAttribute()
+    {
+        if (app()->getLocale() == 'ar') {
+            return $this->mission_ar;
+        }
+        return $this->mission_en;
+    }
+    public function getVisionAttribute()
+    {
+        if (app()->getLocale() == 'ar') {
+            return $this->vision_ar;
+        }
+        return $this->vision_en;
+    }
 }

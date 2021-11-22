@@ -19,19 +19,16 @@
                     <ul>
                         <li>
                             <i class='bx bx-mail-send'></i>
-                            <a
-                                href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#fb939e979794bb92958d9ad5989496"><span
-                                    class="__cf_email__"
-                                    data-cfemail="ddb5b8b1b1b29db4b3abbcf3beb2b0">[email&#160;protected]</span></a>
+                            <a><span>{{$settings->email}}</span></a>
                         </li>
                         <li>
                             <i class='bx bx-phone-call'></i>
-                            <a href="tel:+99084211703">+990-8421-1703</a>
+                            <a href="tel:{{$settings->phone}}">{{$settings->phone}}</a>
                         </li>
-                        <li>
+                        {{-- <li>
                             <i class='bx bx-time'></i>
                             <span>Mon - Sat: 8:00 AM - 7:00 PM</span>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>
@@ -39,28 +36,23 @@
                 <div class="right">
                     <ul>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="{{$settings->facebook}}" target="_blank">
                                 <i class='bx bxl-facebook'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="{{$settings->twitter}}" target="_blank">
                                 <i class='bx bxl-twitter'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="{{$settings->youtube}}" target="_blank">
                                 <i class='bx bxl-youtube'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="{{$settings->instagram}}" target="_blank">
                                 <i class='bx bxl-instagram'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">
-                                <i class='bx bxl-twitter'></i>
                             </a>
                         </li>
                     </ul>
@@ -82,103 +74,25 @@
     <div class="main-nav three">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{route('website')}}">
                     <img src="{{ asset('frontend/assets/img/logo-four.png') }}" alt="Logo">
                 </a>
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle active">الرئيسية<i
-                                    class='bx bx-chevron-down'></i></a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="index.html" class="nav-link">Home Demo One</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="index-2.html" class="nav-link">Home Demo Two</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="index-3.html" class="nav-link active">Home Demo Three</a>
-                                </li>
-                            </ul>
+                            <a href="{{route('website')}}" class="nav-link {{ URL::route('website') === URL::current() ? 'active' : ''}}">{{__('website.home')}}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle">Pages <i class='bx bx-chevron-down'></i></a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link dropdown-toggle">Users <i
-                                            class='bx bx-chevron-down'></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="sign-in.html" class="nav-link">Sign In</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="sign-up.html" class="nav-link">Sign Up</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link dropdown-toggle">Team <i
-                                            class='bx bx-chevron-down'></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="team.html" class="nav-link">Team</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="team-details.html" class="nav-link">Team Details</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="Pricing.html" class="nav-link">Pricing</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="testimonials.html" class="nav-link">Testimonials</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="faq.html" class="nav-link">FAQ</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="404.html" class="nav-link">404 Error Page</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="coming-soon.html" class="nav-link">Coming Soon</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="terms-conditions.html" class="nav-link">Terms & Conditions</a>
-                                </li>
-                            </ul>
+                            <a href="about.html" class="nav-link">{{__('website.about')}}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="about.html" class="nav-link">About</a>
+                            <a href="#" class="nav-link">{{__('website.services')}}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle">Services <i class='bx bx-chevron-down'></i></a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="services.html" class="nav-link">Services</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="service-details.html" class="nav-link">Service Details</a>
-                                </li>
-                            </ul>
+                            <a href="#" class="nav-link">{{__('website.blog')}}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle">Projects <i class='bx bx-chevron-down'></i></a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="projects.html" class="nav-link">Projects</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="project-details.html" class="nav-link">Project Details</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle">Blog <i class='bx bx-chevron-down'></i></a>
+                            <a href="#" class="nav-link dropdown-toggle">{{__('website.pages')}} <i class='bx bx-chevron-down'></i></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
                                     <a href="blog.html" class="nav-link">Blog</a>
@@ -189,11 +103,11 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="contact.html" class="nav-link">Contact</a>
+                            <a href="{{route('contact.us')}}" class="nav-link {{ URL::route('contact.us') === URL::current() ? 'active' : ''}}">{{__('website.contact')}}</a>
                         </li>
                     </ul>
                     <div class="side-nav">
-                        <div class="nav-search">
+                        {{-- <div class="nav-search">
                             <i id="search-btn" class="bx bx-search-alt"></i>
                             <div id="search-overlay" class="block">
                                 <div class="centered">
@@ -206,7 +120,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                             @if ($localeCode == LaravelLocalization::getCurrentLocale())
                             @elseif($url = LaravelLocalization::getLocalizedURL($localeCode))
@@ -222,7 +136,7 @@
                                 </a>
                             @endif
                         @endforeach
-                    </div>
+                    </div> 
                 </div>
         </div>
         </nav>

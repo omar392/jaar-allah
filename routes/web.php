@@ -42,4 +42,6 @@ Route::group(
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){ 
         Route::get('/',[HomeController::class,'index'])->name('website');
+        Route::get('contact-us',[HomeController::class,'contactUs'])->name('contact.us');
+        Route::get('faqs',[HomeController::class,'faqs'])->name('front.faqs');
     });
