@@ -19,6 +19,8 @@ return [
     'phone'=>'Phone',
     'subject'=>'Subject',
     'message'=>'Message',
+    'gallery'=>'Gallery',
+    'read'=>'Read More .',
 
 ];
 ?>

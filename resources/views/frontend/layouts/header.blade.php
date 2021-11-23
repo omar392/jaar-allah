@@ -86,13 +86,13 @@
                             <a href="{{route('front.about')}}" class="nav-link {{ URL::route('front.about') === URL::current() ? 'active' : ''}}">{{__('website.about')}}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">{{__('website.services')}}</a>
+                            <a href="{{route('front.services')}}" class="nav-link {{ URL::route('front.services') === URL::current() ? 'active' : ''}}">{{__('website.services')}}</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">{{__('website.blog')}}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle {{ URL::route('front.faqs') === URL::current() ? 'active' : ''}} {{ URL::route('front.team') === URL::current() ? 'active' : ''}}">{{__('website.pages')}} <i class='bx bx-chevron-down'></i></a>
+                            <a href="#" class="nav-link dropdown-toggle {{ URL::route('front.faqs') === URL::current() ? 'active' : ''}} {{ URL::route('front.gallery') === URL::current() ? 'active' : ''}} {{ URL::route('front.team') === URL::current() ? 'active' : ''}}">{{__('website.pages')}} <i class='bx bx-chevron-down'></i></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
                                     <a href="{{route('front.faqs')}}" class="nav-link {{ URL::route('front.faqs') === URL::current() ? 'active' : ''}}">{{__('website.faqs')}}</a>
@@ -101,8 +101,9 @@
                                     <a href="{{route('front.team')}}" class="nav-link {{ URL::route('front.team') === URL::current() ? 'active' : ''}}">{{__('website.team')}}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="blog-details.html" class="nav-link">Blog Details</a>
+                                    <a href="{{route('front.gallery')}}" class="nav-link {{ URL::route('front.gallery') === URL::current() ? 'active' : ''}}">{{__('website.team')}}</a>
                                 </li>
+                              
                             </ul>
                         </li>
                         <li class="nav-item">

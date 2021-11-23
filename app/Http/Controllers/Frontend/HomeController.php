@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\Counter;
 use App\Models\Faq;
+use App\Models\Gallery;
 use App\Models\Seo;
+use App\Models\Service;
 use App\Models\Setting;
 use App\Models\Team;
 use Illuminate\Http\Request;
@@ -57,5 +59,33 @@ class HomeController extends Controller
         $data['counter'] = Counter::first();
         $data['team'] = Team::where(['status'=>'active'])->get();
         return view('frontend.team.index',$data);
+    }
+    public function gallery()
+    {
+        $data['seo'] = Seo::first();
+        $data['settings'] = Setting::first();
+        $data['about'] = About::first();
+        $data['counter'] = Counter::first();
+        $data['gallery'] = Gallery::where(['status'=>'active'])->get();
+        return view('frontend.gallery.index',$data);
+    }
+    public function services()
+    {
+        $data['seo'] = Seo::first();
+        $data['settings'] = Setting::first();
+        $data['about'] = About::first();
+        $data['counter'] = Counter::first();
+        $data['services'] = Service::where(['status'=>'active'])->get();
+        return view('frontend.services.index',$data);
+    }
+    public function servicesDetails($id)
+    {
+        $data['seo'] = Seo::first();
+        $data['settings'] = Setting::first();
+        $data['about'] = About::first();
+        $data['counter'] = Counter::first();
+        $data['services'] = Service::where(['status'=>'active'])->get();
+        $service = Service::findOrFail($id);
+        return view('frontend.services.details',$data,compact('service'));
     }
 }

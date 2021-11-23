@@ -47,4 +47,7 @@ Route::group(
         Route::get('faqs',[HomeController::class,'faqs'])->name('front.faqs');
         Route::get('about-us',[HomeController::class,'aboutUs'])->name('front.about');
         Route::get('our-team',[HomeController::class,'team'])->name('front.team');
+        Route::get('gallery',[HomeController::class,'gallery'])->name('front.gallery');
+        Route::get('services',[HomeController::class,'services'])->name('front.services');
+        Route::get('services-details/{id}',[HomeController::class,'servicesDetails'])->name('front.services.details');
     });

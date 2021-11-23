@@ -10,7 +10,7 @@ class Service extends Model
     use HasFactory;
     protected $fillable = ['image','name_ar','name_en','description_ar','description_en','status','url'];
     
-    public function getTitleAttribute()
+    public function getNameAttribute()
     {
         if (app()->getLocale() == 'ar') {
             return $this->name_ar;
