@@ -1,10 +1,8 @@
 @extends('frontend.layouts.master')
 @section('content')
-    
-
-
     <div class="banner-area three">
         <div class="banner-slider-two owl-theme owl-carousel">
+            @foreach ($banners as $item)
             <div class="banner-item">
                 <div class="d-table">
                     <div class="d-table-cell">
@@ -12,24 +10,22 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-7">
                                     <div class="banner-content">
-                                        <h1>Achieve Your Desired Success With Us</h1>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy when an unknown printer
-                                        </p>
-                                        <a class="common-btn three" href="#">
-                                            Let's Start Now
+                                        <h1 style="font-family: tajawal">{{$item->name}}</h1>
+                                        <p>{!! $item->description !!}</p>
+                                        <a class="common-btn three" href="{{route('contact.us')}}">
+                                            {{__('website.contact')}}
                                             <span></span>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-lg-5">
                                     <div class="banner-img">
-                                        <img src="{{ asset('frontend/assets/img/banner/banner-main2.jpg') }}"
+                                        <img src="{{ asset('upload/banner/' . $item->image) }}"
                                             alt="Banner">
-                                        <img src="{{ asset('frontend/assets/img/banner/banner-shape3.png') }}"
-                                            alt="Banner">
-                                        <img src="{{ asset('frontend/assets/img/banner/banner-shape2.png') }}"
-                                            alt="Shape">
+                                        {{-- <img src="{{ asset('frontend/assets/img/banner/banner-shape3.png') }}" --}}
+                                            {{-- alt="Banner"> --}}
+                                        {{-- <img src="{{ asset('frontend/assets/img/banner/banner-shape2.png') }}" --}}
+                                            {{-- alt="Shape"> --}}
                                     </div>
                                 </div>
                             </div>
@@ -37,86 +33,16 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <span class="banner-count">1</span>
+                    <span class="banner-count">{{ $loop->iteration }}</span>
                 </div>
             </div>
-            <div class="banner-item">
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="container-fluid">
-                            <div class="row align-items-center">
-                                <div class="col-lg-7">
-                                    <div class="banner-content">
-                                        <h1 style="font-family: tajawal">الشركات الكبرى</h1>
-                                        <p>Lorem Ipsum is هنا الشركات الكبرىtting industry. Lorem Ipsum has been the
-                                            industry's standard dummy when an unknown printer</p>
-                                        <a class="common-btn three" href="#">
-                                            Let's Start Now
-                                            <span></span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5">
-                                    <div class="banner-img">
-                                        <img src="{{ asset('frontend/assets/img/banner/banner-main3.jpg') }}"
-                                            alt="Banner">
-                                        <img src="{{ asset('frontend/assets/img/banner/banner-shape3.png') }}"
-                                            alt="Banner">
-                                        <img src="{{ asset('frontend/assets/img/banner/banner-shape2.png') }}"
-                                            alt="Shape">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <span class="banner-count">2</span>
-                </div>
-            </div>
-            <div class="banner-item">
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="container-fluid">
-                            <div class="row align-items-center">
-                                <div class="col-lg-7">
-                                    <div class="banner-content">
-                                        <h1>Get Engage In Profitable Business</h1>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy when an unknown printer
-                                        </p>
-                                        <a class="common-btn three" href="#">
-                                            Let's Start Now
-                                            <span></span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5">
-                                    <div class="banner-img">
-                                        <img src="{{ asset('frontend/assets/img/banner/banner-main4.jpg') }}"
-                                            alt="Banner">
-                                        <img src="{{ asset('frontend/assets/img/banner/banner-shape3.png') }}"
-                                            alt="Banner">
-                                        <img src="{{ asset('frontend/assets/img/banner/banner-shape2.png') }}"
-                                            alt="Shape">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <span class="banner-count">3</span>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="banner-shape">
             <img src="{{ asset('frontend/assets/img/banner/banner-shape4.png') }}" alt="Shape">
         </div>
     </div>
-
-
-    <section class="features-area pt-100 pb-70">
+    {{-- <section class="features-area pt-100 pb-70">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-sm-6 col-lg-4">
@@ -188,10 +114,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
-    <section class="about-area two three pt-100 pb-70">
+    {{-- <section class="about-area two three pt-100 pb-70">
         <div class="about-shape">
             <img src="{{asset('frontend/assets/img/about/about-shape1.png')}}" alt="Shape">
         </div>
@@ -278,89 +204,30 @@
                 </div>
             </div>
         </div>
-    </section>
-
+    </section> --}}
 
     <section class="services-area three pt-100 pb-70">
         <div class="container">
             <div class="section-title three">
-                <h2>The <span>Services</span> That We Provide</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis libero facilis consequatur
-                    deleniti, ipsa provident? Culpa tenetur incidunt reprehenderit qui a voluptas</p>
+                <h2 style="font-family: tajawal">{{__('website.services')}}</h2>
+                <p>{{$about->about}}</p>
             </div>
             <div class="row">
+                @foreach ($services as $item)
                 <div class="col-sm-6 col-lg-4">
                     <div class="services-item">
                         <i class="flaticon-marketing-strategy"></i>
-                        <h3>
-                            <a href="service-details.html">Business Strategy</a>
+                        <h3 style="font-family: tajawal">
+                            <a href="{{route('front.services.details',[$item->id])}}">{{$item->name}}</a>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor
-                            invidunt ut labore et dolore magna</p>
-                        <a class="services-btn" href="service-details.html">Read More</a>
+                        <a class="services-btn" href="{{route('front.services.details',[$item->id])}}">{{__('website.read')}}</a>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="services-item two">
-                        <i class="flaticon-dollars-money-bag-with-a-clock"></i>
-                        <h3>
-                            <a href="service-details.html">Investment Planning</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor
-                            invidunt ut labore et dolore magna</p>
-                        <a class="services-btn" href="service-details.html">Read More</a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="services-item three">
-                        <i class="flaticon-strategy-in-a-labyrinth"></i>
-                        <h3>
-                            <a href="service-details.html">Project Management</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor
-                            invidunt ut labore et dolore magna</p>
-                        <a class="services-btn" href="service-details.html">Read More</a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="services-item four">
-                        <i class="flaticon-trend"></i>
-                        <h3>
-                            <a href="service-details.html">Financial Analysis</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor
-                            invidunt ut labore et dolore magna</p>
-                        <a class="services-btn" href="service-details.html">Read More</a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="services-item five">
-                        <i class="flaticon-evaluate"></i>
-                        <h3>
-                            <a href="service-details.html">Audit & Evaluation</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor
-                            invidunt ut labore et dolore magna</p>
-                        <a class="services-btn" href="service-details.html">Read More</a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="services-item six">
-                        <i class="flaticon-insurance"></i>
-                        <h3>
-                            <a href="service-details.html">Support & Maintain</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, conse tetur sadipscing elitr, sed diam nonumy eirm od tempor
-                            invidunt ut labore et dolore magna</p>
-                        <a class="services-btn" href="service-details.html">Read More</a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
-
-
-    <div class="skills-area ptb-100">
+    {{-- <div class="skills-area ptb-100">
         <div class="skills-img">
             <img src="{{ asset('frontend/assets/img/skills-main.png') }}" alt="Skills">
         </div>
@@ -393,82 +260,61 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
+    </div> --}}
     <div class="counter-area two three pt-100 pb-70">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="faq-item">
                         <div class="section-title three">
-                            <h2><span>Ask</span> Anything What You Want</h2>
+                            <h2 style="font-family: tajawal">{{__('website.faqs')}}</h2>
                         </div>
                         <ul class="accordion">
+                            @foreach ($faqs as $item)
                             <li>
-                                <a>How does Inva help in business investment permanently?</a>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipsci ng elitr, sed dia mi nonumy eirmod
-                                    tempor invi dunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+                                <a>{{$item->ask}}</a>
+                                <p>{!! $item->answer !!}</p>
                             </li>
-                            <li>
-                                <a>How does Inva help in business growth?</a>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipsci ng elitr, sed dia mi nonumy eirmod
-                                    tempor invi dunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
-                            </li>
-                            <li>
-                                <a>How does Inva help to gain financial goal?</a>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipsci ng elitr, sed dia mi nonumy eirmod
-                                    tempor invi dunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
-                            </li>
-                            <li>
-                                <a>Can I get financial investment from Inva without interest?</a>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipsci ng elitr, sed dia mi nonumy eirmod
-                                    tempor invi dunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
-                            </li>
-                            <li>
-                                <a>How does Inva take role in business partnership?</a>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipsci ng elitr, sed dia mi nonumy eirmod
-                                    tempor invi dunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" dir="ltr">
                     <div class="row">
                         <div class="col-sm-6 col-lg-6">
                             <div class="counter-item">
                                 <h3>
-                                    <span class="odometer" data-count="25">00</span>
+                                    <span class="odometer" data-count="{{$counter->years}}"></span>
                                     <span class="target">+</span>
                                 </h3>
-                                <p>Years Of Experience</p>
+                                <p>{{__('website.years')}}</p>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-6">
                             <div class="counter-item">
                                 <h3>
-                                    <span class="odometer" data-count="150">00</span>
+                                    <span class="odometer" data-count="{{$counter->issues}}"></span>
                                     <span class="target">+</span>
                                 </h3>
-                                <p>Happy Clients</p>
+                                <p>{{__('website.issues')}}</p>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-6">
                             <div class="counter-item">
                                 <h3>
-                                    <span class="odometer" data-count="300">00</span>
+                                    <span class="odometer" data-count="{{$counter->branches}}"></span>
                                     <span class="target">+</span>
                                 </h3>
-                                <p>Projects Done</p>
+                                <p>{{__('website.branches')}}</p>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-6">
                             <div class="counter-item">
                                 <h3>
-                                    <span class="odometer" data-count="30">00</span>
+                                    <span class="odometer" data-count="{{$counter->team}}"></span>
                                     <span class="target">+</span>
                                 </h3>
-                                <p>Opened Location</p>
+                                <p>{{__('website.team')}}</p>
                             </div>
                         </div>
                     </div>
@@ -476,9 +322,7 @@
             </div>
         </div>
     </div>
-
-
-    <section class="pricing-area three pt-100 pb-70">
+    {{-- <section class="pricing-area three pt-100 pb-70">
         <div class="pricing-shape">
             <img src="{{ asset('frontend/assets/img/pricing-shape1.png') }}" alt="Shape">
             <img src="{{ asset('frontend/assets/img/pricing-shape1.png') }}" alt="Shape">
@@ -543,118 +387,37 @@
                 </div>
             </div>
         </div>
-    </section>
-
-
+    </section> --}}
     <section class="team-area three ptb-100">
         <div class="container">
             <div class="section-title three">
-                <h2>Meet Our Awesome <span>Team Members</span></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis libero facilis consequatur
-                    deleniti, ipsa provident? Culpa tenetur incidunt reprehenderit qui a voluptas</p>
+                <h2 style="font-family: tajawal">{{__('website.team')}}</h2>
             </div>
             <div class="row">
+                @foreach ($team as $item)
                 <div class="col-sm-6 col-lg-4">
                     <div class="team-item">
                         <div class="top">
-                            <img src="{{ asset('frontend/assets/img/team/team1.jpg') }}" alt="Team">
+                            <img src="{{ asset('upload/team/' . $item->image) }}" alt="Team">
                         </div>
                         <div class="bottom">
-                            <ul>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bxl-facebook'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bxl-linkedin'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bxl-twitter'></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <h3>
-                                <a href="team-details.html">David Seek</a>
+                            <h3 style="font-family: tajawal">
+                                <a href="team-details.html">{{$item->name}}</a>
                             </h3>
-                            <span>Cheif Executive</span>
+                            <span>{{$item->job}}</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="team-item">
-                        <div class="top">
-                            <img src="{{ asset('frontend/assets/img/team/team2.jpg') }}" alt="Team">
-                        </div>
-                        <div class="bottom">
-                            <ul>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bxl-facebook'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bxl-linkedin'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bxl-twitter'></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <h3>
-                                <a href="team-details.html">Angela Carter</a>
-                            </h3>
-                            <span>Cheif Marketing Researcher</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-4">
-                    <div class="team-item">
-                        <div class="top">
-                            <img src="{{ asset('frontend/assets/img/team/team3.jpg') }}" alt="Team">
-                        </div>
-                        <div class="bottom">
-                            <ul>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bxl-facebook'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bxl-linkedin'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class='bx bxl-twitter'></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <h3>
-                                <a href="team-details.html">Moris James</a>
-                            </h3>
-                            <span>Cheif Finance Consultant</span>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <div class="text-center">
-                <a class="common-btn three" href="team.html">
-                    All Members
+                <a class="common-btn three" href="{{route('front.team')}}">
+                    {{__('website.team')}}
                     <span></span>
                 </a>
             </div>
         </div>
     </section>
-
-
     <section class="testimonials-area three ptb-100">
         <div class="testimonials-shape">
             <img src="{{ asset('frontend/assets/img/testimonials-shape2.png') }}" alt="Shape">
@@ -740,8 +503,6 @@
             </div>
         </div>
     </section>
-
-
     <section class="subscribe-area three ptb-100">
         <div class="subscribe-img">
             <img src="{{ asset('frontend/assets/img/subscribe-main2.png') }}" alt="Subscribe">
@@ -765,5 +526,4 @@
             </div>
         </div>
     </section>
-
     @endsection

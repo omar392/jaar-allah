@@ -9,8 +9,6 @@
         </div>
     </div>
 </div>
-
-
 <div class="header-area three">
     <div class="container">
         <div class="row">
@@ -19,11 +17,11 @@
                     <ul>
                         <li>
                             <i class='bx bx-mail-send'></i>
-                            <a><span>{{$settings->email}}</span></a>
+                            <a><span>{{ $settings->email }}</span></a>
                         </li>
                         <li>
                             <i class='bx bx-phone-call'></i>
-                            <a href="tel:{{$settings->phone}}">{{$settings->phone}}</a>
+                            <a href="tel:{{ $settings->phone }}">{{ $settings->phone }}</a>
                         </li>
                         {{-- <li>
                             <i class='bx bx-time'></i>
@@ -36,22 +34,22 @@
                 <div class="right">
                     <ul>
                         <li>
-                            <a href="{{$settings->facebook}}" target="_blank">
+                            <a href="{{ $settings->facebook }}" target="_blank">
                                 <i class='bx bxl-facebook'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="{{$settings->twitter}}" target="_blank">
+                            <a href="{{ $settings->twitter }}" target="_blank">
                                 <i class='bx bxl-twitter'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="{{$settings->youtube}}" target="_blank">
+                            <a href="{{ $settings->youtube }}" target="_blank">
                                 <i class='bx bxl-youtube'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="{{$settings->instagram}}" target="_blank">
+                            <a href="{{ $settings->instagram }}" target="_blank">
                                 <i class='bx bxl-instagram'></i>
                             </a>
                         </li>
@@ -61,53 +59,67 @@
         </div>
     </div>
 </div>
-
-
+{{-- <marquee width="60%" direction="right" height="30px">
+    This is a sample scrolling text that has scrolls texts to right.
+</marquee> --}}
+<div class="marquee" dir="rtl">
+    <div>
+      @foreach ($news as $item)
+      <span>** &amp; ** {{$item->new}} ** &amp; **</span>
+      @endforeach
+    </div>
+  </div>
 <div class="navbar-area sticky-top">
-
     <div class="mobile-nav">
         <a href="index.html" class="logo">
             <img src="{{ asset('frontend/assets/img/logo-four.png') }}" alt="Logo">
         </a>
     </div>
-
     <div class="main-nav three">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="{{route('website')}}">
+                <a class="navbar-brand" href="{{ route('website') }}">
                     <img src="{{ asset('frontend/assets/img/logo-four.png') }}" alt="Logo">
                 </a>
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="{{route('website')}}" class="nav-link {{ URL::route('website') === URL::current() ? 'active' : ''}}">{{__('website.home')}}</a>
+                            <a href="{{ route('website') }}"
+                                class="nav-link {{ URL::route('website') === URL::current() ? 'active' : '' }}">{{ __('website.home') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('front.about')}}" class="nav-link {{ URL::route('front.about') === URL::current() ? 'active' : ''}}">{{__('website.about')}}</a>
+                            <a href="{{ route('front.about') }}"
+                                class="nav-link {{ URL::route('front.about') === URL::current() ? 'active' : '' }}">{{ __('website.about') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('front.services')}}" class="nav-link {{ URL::route('front.services') === URL::current() ? 'active' : ''}}">{{__('website.services')}}</a>
+                            <a href="{{ route('front.services') }}"
+                                class="nav-link {{ URL::route('front.services') === URL::current() ? 'active' : '' }}">{{ __('website.services') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">{{__('website.blog')}}</a>
+                            <a href="{{ route('front.blog') }}" class="nav-link">{{ __('website.blog') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle {{ URL::route('front.faqs') === URL::current() ? 'active' : ''}} {{ URL::route('front.gallery') === URL::current() ? 'active' : ''}} {{ URL::route('front.team') === URL::current() ? 'active' : ''}}">{{__('website.pages')}} <i class='bx bx-chevron-down'></i></a>
+                            <a href="#"
+                                class="nav-link dropdown-toggle {{ URL::route('front.faqs') === URL::current() ? 'active' : '' }} {{ URL::route('front.gallery') === URL::current() ? 'active' : '' }} {{ URL::route('front.team') === URL::current() ? 'active' : '' }}">{{ __('website.pages') }}
+                                <i class='bx bx-chevron-down'></i></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a href="{{route('front.faqs')}}" class="nav-link {{ URL::route('front.faqs') === URL::current() ? 'active' : ''}}">{{__('website.faqs')}}</a>
+                                    <a href="{{ route('front.faqs') }}"
+                                        class="nav-link {{ URL::route('front.faqs') === URL::current() ? 'active' : '' }}">{{ __('website.faqs') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('front.team')}}" class="nav-link {{ URL::route('front.team') === URL::current() ? 'active' : ''}}">{{__('website.team')}}</a>
+                                    <a href="{{ route('front.team') }}"
+                                        class="nav-link {{ URL::route('front.team') === URL::current() ? 'active' : '' }}">{{ __('website.team') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{route('front.gallery')}}" class="nav-link {{ URL::route('front.gallery') === URL::current() ? 'active' : ''}}">{{__('website.team')}}</a>
+                                    <a href="{{ route('front.gallery') }}"
+                                        class="nav-link {{ URL::route('front.gallery') === URL::current() ? 'active' : '' }}">{{ __('website.gallery') }}</a>
                                 </li>
-                              
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('contact.us')}}" class="nav-link {{ URL::route('contact.us') === URL::current() ? 'active' : ''}}">{{__('website.contact')}}</a>
+                            <a href="{{ route('contact.us') }}"
+                                class="nav-link {{ URL::route('contact.us') === URL::current() ? 'active' : '' }}">{{ __('website.contact') }}</a>
                         </li>
                     </ul>
                     <div class="side-nav">
@@ -140,10 +152,10 @@
                                 </a>
                             @endif
                         @endforeach
-                    </div> 
+                    </div>
                 </div>
         </div>
         </nav>
     </div>
 </div>
-</div>
+

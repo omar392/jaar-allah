@@ -86,7 +86,7 @@
                         <span class="odometer" data-count="{{$counter->issues}}"></span>
                         {{-- <span class="target">+</span> --}}
                     </h3>
-                    <p>{{__('website.clients')}}</p>
+                    <p>{{__('website.issues')}}</p>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-3 card-overlay">

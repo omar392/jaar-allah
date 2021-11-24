@@ -14,6 +14,7 @@ return [
     'clients'=>'Clients',
     'team'=>'Our Team',
     'branches'=>'Branches',
+    'issues'=>'Issues',
     'name'=>'Name',
     'email'=>'Email',
     'phone'=>'Phone',

@@ -50,4 +50,6 @@ Route::group(
         Route::get('gallery',[HomeController::class,'gallery'])->name('front.gallery');
         Route::get('services',[HomeController::class,'services'])->name('front.services');
         Route::get('services-details/{id}',[HomeController::class,'servicesDetails'])->name('front.services.details');
+        Route::get('blog',[HomeController::class,'blog'])->name('front.blog');
+        Route::get('blog-details/{id}',[HomeController::class,'blogDetails'])->name('front.blog.details');
     });

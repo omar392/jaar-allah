@@ -37,6 +37,50 @@
         
         body {
             font-family: 'Tajawal', sans-serif;
+            /* marquee div container */
+
         }
-        </style>
+
+        
+        .marquee {
+    font-size: 2vw;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    height: 2.5vw;
+    overflow: hidden;
+    background-color: #000;
+    position: relative;
+}
+/* nested div inside the container */
+.marquee div {
+    display: block;
+    width: 200%;
+    position: absolute; 
+    overflow: hidden;
+    animation: marquee 12s linear infinite;
+}
+/* span with text */
+@if (app()->getLocale() == 'ar')
+.marquee span {
+    float: right;
+    width: 50%;
+}
+/* keyframe */
+@keyframes marquee {
+    0% { right: 0; }
+    100% { right: -100%; }
+}
+@endif
+@if (app()->getLocale() == 'en')
+.marquee span {
+    float: left;
+    width: 50%;
+}
+/* keyframe */
+@keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+}
+@endif
+    </style>
 </head>

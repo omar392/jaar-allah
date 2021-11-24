@@ -40,6 +40,13 @@
                             </a>
                         </li>
                         @endif
+                        @if(Auth::guard('admin')->user()->hasPermission('news-read'))
+                        <li>
+                            <a href="{{route('new.index')}}" class="waves-effect">
+                                <i class="fas fa-envelope-square"></i><span style="font-family: cairo;">قرارات و اخبار سريعة</span>
+                            </a>
+                        </li>
+                        @endif
                         @if(Auth::guard('admin')->user()->hasPermission('issues-read'))
                         <li>
                             <a href="{{route('issue.index')}}" class="waves-effect">

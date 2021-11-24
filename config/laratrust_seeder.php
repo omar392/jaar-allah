@@ -24,6 +24,7 @@ return [
             'customers'=>'c,r,u,d',
             'banners'=>'c,r,u,d',
             'galleries'=>'c,r,u,d',
+            'news'=>'c,r,u,d',
             'issues'=>'c,r,u,d',
             'decisions'=>'c,r,u,d',
             'services'=>'c,r,u,d',

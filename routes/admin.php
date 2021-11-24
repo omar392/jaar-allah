@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\IssueController;
 use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\ServiceController;
@@ -63,6 +64,10 @@ Route::post('customer_status',[CustomerController::class,'customerStatus'])->nam
 //blog
 Route::resource('blog', BlogController::class);
 Route::post('blog_status',[BlogController::class,'blogStatus'])->name('blog.status');
+
+//new
+Route::resource('new', NewsController::class);
+Route::post('new_status',[NewsController::class,'newStatus'])->name('new.status');
 
 //issue
 Route::resource('issue', IssueController::class);
