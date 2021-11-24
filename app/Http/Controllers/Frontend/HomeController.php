@@ -7,8 +7,10 @@ use App\Models\About;
 use App\Models\Banner;
 use App\Models\Blog;
 use App\Models\Counter;
+use App\Models\Customer;
 use App\Models\Faq;
 use App\Models\Gallery;
+use App\Models\Opinion;
 use App\Models\Seo;
 use App\Models\Service;
 use App\Models\Setting;
@@ -29,6 +31,8 @@ class HomeController extends Controller
         $data['services'] = Service::where(['status'=>'active'])->get();
         $data['faqs'] = Faq::where(['status'=>'active'])->get();
         $data['news'] = Short::where(['status'=>'active'])->get();
+        $data['customers'] = Customer::where(['status'=>'active'])->get();
+        $data['opinions'] = Opinion::where(['status'=>'active'])->get();
         $data['team'] = Team::where(['status'=>'active'])->orderBy('id', 'desc')->limit(3)->get();
         return view('frontend.home',$data);
     }

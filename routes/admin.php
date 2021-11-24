@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\IssueController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\OpinionController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\ServiceController;
@@ -92,5 +93,9 @@ Route::post('seo',[SeoController::class,'update'])->name('updateseo');
 //counter
 Route::get('counter',[CounterController::class,'index'])->name('counter');
 Route::post('counter',[CounterController::class,'update'])->name('updatecounter');
+
+//opinion
+Route::resource('opinion', OpinionController::class);
+Route::post('opinion_status',[OpinionController::class,'opinionStatus'])->name('opinion.status');
 });
 

@@ -82,6 +82,13 @@
                             </a>
                         </li>
                         @endif
+                        @if(Auth::guard('admin')->user()->hasPermission('opinions-read'))
+                        <li>
+                            <a href="{{route('opinion.index')}}" class="waves-effect">
+                                <i class="fas fa-crown"></i><span style="font-family: cairo;">أراء الجمهور</span>
+                            </a>
+                        </li>
+                        @endif
                         @if(Auth::guard('admin')->user()->hasPermission('faqs-read'))
                         <li>
                             <a href="{{route('faq.index')}}" class="waves-effect">

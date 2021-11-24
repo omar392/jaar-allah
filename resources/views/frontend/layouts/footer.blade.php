@@ -2,10 +2,10 @@
     <footer class="footer-area two three pt-100">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-sm-6 col-lg-4">
                     <div class="footer-item">
                         <div class="footer-logo">
-                            <a class="footer-inva" href="index.html">
+                            <a class="footer-inva" href="{{route('website')}}">
                                 <img src="{{ asset('frontend/assets/img/logo-three.png') }}" alt="Logo">
                             </a>
                             <p>{{$about->about}}</p>
@@ -39,10 +39,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-sm-6 col-lg-4">
                     <div class="footer-item">
                         <div class="footer-link">
-                            <h3>Important Links</h3>
+                            <h3 style="font-family: tajawal">{{__('website.fast')}}</h3>
                             <ul>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
+                {{-- <div class="col-sm-6 col-lg-3">
                     <div class="footer-item">
                         <div class="footer-hours">
                             <h3>Open Hours</h3>
@@ -77,8 +77,8 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
+                </div> --}}
+                <div class="col-sm-6 col-lg-4">
                     <div class="footer-item">
                         <div class="footer-contact">
                             <h3 style="font-family: tajawal">{{__('website.continfo')}}</h3>
