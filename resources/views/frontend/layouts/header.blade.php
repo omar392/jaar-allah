@@ -96,16 +96,27 @@
                                 class="nav-link {{ URL::route('front.services') === URL::current() ? 'active' : '' }}">{{ __('website.services') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('front.blog') }}" class="nav-link">{{ __('website.blog') }}</a>
+                            <a href="{{ route('front.issues') }}" class="nav-link {{ URL::route('front.issues') === URL::current() ? 'active' : '' }}">{{ __('website.issues1') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('front.blog') }}" class="nav-link {{ URL::route('front.blog') === URL::current() ? 'active' : '' }}">{{ __('website.blog') }}</a>
                         </li>
                         <li class="nav-item">
                             <a href="#"
-                                class="nav-link dropdown-toggle {{ URL::route('front.faqs') === URL::current() ? 'active' : '' }} {{ URL::route('front.gallery') === URL::current() ? 'active' : '' }} {{ URL::route('front.team') === URL::current() ? 'active' : '' }}">{{ __('website.pages') }}
+                                class="nav-link dropdown-toggle {{ URL::route('front.faqs') === URL::current() ? 'active' : '' }} {{ URL::route('front.gallery') === URL::current() ? 'active' : '' }} {{ URL::route('front.team') === URL::current() ? 'active' : '' }} {{ URL::route('front.decisions') === URL::current() ? 'active' : '' }} {{ URL::route('front.terms') === URL::current() ? 'active' : '' }}">{{ __('website.pages') }}
                                 <i class='bx bx-chevron-down'></i></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
+                                    <a href="{{ route('front.decisions') }}"
+                                        class="nav-link {{ URL::route('front.decisions') === URL::current() ? 'active' : '' }}">{{ __('website.decisions') }}</a>
+                                </li>
+                                <li class="nav-item">
                                     <a href="{{ route('front.faqs') }}"
                                         class="nav-link {{ URL::route('front.faqs') === URL::current() ? 'active' : '' }}">{{ __('website.faqs') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('front.terms') }}"
+                                        class="nav-link {{ URL::route('front.terms') === URL::current() ? 'active' : '' }}">{{ __('website.terms') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{ route('front.team') }}"

@@ -96,6 +96,13 @@
                             </a>
                         </li>
                         @endif
+                        @if(Auth::guard('admin')->user()->hasPermission('terms-read'))
+                        <li>
+                            <a href="{{route('term.index')}}" class="waves-effect">
+                                <i class="fas fa-user-friends"></i><span style="font-family: cairo;">  القيم الحاكمة  </span>
+                            </a>
+                        </li>
+                        @endif
                         @if(Auth::guard('admin')->user()->hasPermission('teams-read'))
                         <li>
                             <a href="{{route('team.index')}}" class="waves-effect">

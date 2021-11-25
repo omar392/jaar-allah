@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Admin\TermsController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -69,6 +70,10 @@ Route::post('blog_status',[BlogController::class,'blogStatus'])->name('blog.stat
 //new
 Route::resource('new', NewsController::class);
 Route::post('new_status',[NewsController::class,'newStatus'])->name('new.status');
+
+//term
+Route::resource('term', TermsController::class);
+Route::post('term_status',[TermsController::class,'termStatus'])->name('term.status');
 
 //issue
 Route::resource('issue', IssueController::class);

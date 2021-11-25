@@ -32,7 +32,7 @@
     <title>د.جار الله</title>
     <link rel="icon" type="image/png" href="{{asset('frontend/assets/img/favicon.png')}}">
     <link href="http://fonts.cdnfonts.com/css/tajawal" rel="stylesheet">
-                
+    @toastr_css
     <style>
         
         body {

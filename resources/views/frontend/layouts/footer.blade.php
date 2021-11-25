@@ -60,6 +60,14 @@
                                     <i class='bx bx-chevron-right'></i>
                                     <a href="{{route('front.faqs')}}">{{__('website.faqs')}}</a>
                                 </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    <a href="{{route('contact.us')}}">{{__('website.contact')}}</a>
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    <a href="{{route('front.gallery')}}">{{__('website.gallery')}}</a>
+                                </li>
                             </ul>
                         </div>
                     </div>

@@ -57,22 +57,43 @@
                             </ul>
                         </div>
                         <div class="touch widget-item">
-                            <h3>Get In Touch</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                            <form>
+                            <h3 style="font-family: tajawal">{{__('website.contact')}}</h3>
+                            <form id="contactForm" action="{{route('contact.store')}}" method="POST">
+                                @csrf
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Name">
+                                    <input type="text" class="form-control" name="name" placeholder="{{__('website.name')}}">
+                                    @error('name')
+                                    <p class="text-danger">{{$message}}</p>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email">
+                                    <input type="email" name="email" class="form-control" placeholder="{{__('website.email')}}">
+                                    @error('email')
+                                    <p class="text-danger">{{$message}}</p>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="your-message" rows="6" class="form-control"
-                                        placeholder="Message"></textarea>
+                                    <input type="number" name="phone" class="form-control" placeholder="{{__('website.phone')}}">
+                                    @error('phone')
+                                    <p class="text-danger">{{$message}}</p>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="subject" class="form-control" placeholder="{{__('website.subject')}}">
+                                    @error('subject')
+                                    <p class="text-danger">{{$message}}</p>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="address" rows="6" class="form-control"
+                                        placeholder="{{__('website.message')}}"></textarea>
+                                        @error('address')
+                                        <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn common-btn">
-                                        Send Message
+                                        {{__('website.send')}}
                                         <span></span>
                                     </button>
                                 </div>

@@ -35,46 +35,54 @@
                     <div class="section-title">
                         <h2 style="font-family: tajawal">{{__('website.contact')}}</h2>
                     </div>
-                    <form id="contactForm">
+                    <form id="contactForm" action="{{route('contact.store')}}" method="POST">
+                        @csrf
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="Name"
-                                        required>
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="{{__('website.name')}}">
+                                    @error('name')
+                                    <p class="text-danger">{{$message}}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="email" name="email" id="email" class="form-control" placeholder="Email"
-                                        required data-error="Please enter your email">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="{{__('website.email')}}">
+                                    @error('email')
+                                    <p class="text-danger">{{$message}}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="text" name="phone_number" id="phone_number" placeholder="Phone" required
-                                        data-error="Please enter your number" class="form-control">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" name="phone" id="phone" placeholder="{{__('website.phone')}}" class="form-control">
+                                    @error('phone')
+                                    <p class="text-danger">{{$message}}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="text" name="msg_subject" id="msg_subject" class="form-control"
-                                        placeholder="Subject" required data-error="Please enter your subject">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" name="subject" id="subject" class="form-control"
+                                        placeholder="{{__('website.subject')}}">
+                                        @error('subject')
+                                        <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <textarea name="message" class="form-control" id="message" cols="30" rows="8"
-                                        placeholder="Write message" required data-error="Write your message"></textarea>
-                                    <div class="help-block with-errors"></div>
+                                    <textarea name="address" class="form-control" id="address" cols="30" rows="8"
+                                        placeholder="{{__('website.message')}}"></textarea>
+                                        @error('address')
+                                        <p class="text-danger">{{$message}}</p>
+                                        @enderror
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <button type="submit" class="btn common-btn">
-                                    Send Message
+                                    {{__('website.send')}}
                                 </button>
                                 <div id="msgSubmit" class="h3 text-center hidden"></div>
                                 <div class="clearfix"></div>

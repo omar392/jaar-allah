@@ -8,7 +8,7 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="title-content">
-                        <h2 style="font-family: tajawal">{{$service->name}}</h2>
+                        <h2 style="font-family: tajawal">{{$decision->title}}</h2>
                         <ul>
                             <li>
                                 <a href="{{route('website')}}">{{__('website.home')}}</a>
@@ -17,7 +17,7 @@
                                 <i class='bx bx-chevron-right'></i>
                             </li>
                             <li>
-                                <span>{{__('website.services')}}</span>
+                                <span>{{__('website.decisions')}}</span>
                             </li>
                         </ul>
                     </div>
@@ -106,10 +106,11 @@
                         <div class="details-img">
                             <div class="row">
                                 {{-- <div class="col-sm-6 col-lg-6"> --}}
-                                    <img src="{{ asset('upload/service/' . $service->image) }}" alt="Details">
+                                    <img src="{{ asset('upload/decision/' . $decision->image) }}" alt="Details">
                                 {{-- </div> --}}
                             </div>
-                            <p>{!! $service->description !!}</p>
+                            <p>{!! $decision->description !!}</p>
+                            <br><a href="{{$decision->url}}">{{__('website.url')}}</a>
                         </div>
                     </div>
                 </div>

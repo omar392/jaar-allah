@@ -17,6 +17,12 @@ use App\Models\Setting;
 use App\Models\Short;
 use App\Models\Team;
 use Illuminate\Http\Request;
+use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Email;
+use App\Models\Decision;
+use App\Models\Issue;
+use App\Models\Term;
 use PHPUnit\Framework\Constraint\Count;
 
 class HomeController extends Controller
@@ -54,6 +60,16 @@ class HomeController extends Controller
         $data['faqs'] = Faq::where(['status'=>'active'])->get();
         $data['news'] = Short::where(['status'=>'active'])->get();
         return view('frontend.faqs.index',$data);
+    }
+    public function terms()
+    {
+        $data['seo'] = Seo::first();
+        $data['settings'] = Setting::first();
+        $data['about'] = About::first();
+        $data['counter'] = Counter::first();
+        $data['terms'] = Term::where(['status'=>'active'])->get();
+        $data['news'] = Short::where(['status'=>'active'])->get();
+        return view('frontend.terms.index',$data);
     }
     public function aboutUs()
     {
@@ -105,6 +121,50 @@ class HomeController extends Controller
         $data['news'] = Short::where(['status'=>'active'])->get();
         return view('frontend.services.details',$data,compact('service'));
     }
+    public function issues()
+    {
+        $data['seo'] = Seo::first();
+        $data['settings'] = Setting::first();
+        $data['about'] = About::first();
+        $data['counter'] = Counter::first();
+        $data['issues'] = Issue::where(['status'=>'active'])->get();
+        $data['news'] = Short::where(['status'=>'active'])->get();
+        return view('frontend.issues.index',$data);
+    }
+    public function issuesDetails($id)
+    {
+        $data['seo'] = Seo::first();
+        $data['settings'] = Setting::first();
+        $data['about'] = About::first();
+        $data['counter'] = Counter::first();
+        $data['issues'] = Issue::where(['status'=>'active'])->get();
+        $data['services'] = Service::where(['status'=>'active'])->get();
+        $issue = Issue::findOrFail($id);
+        $data['news'] = Short::where(['status'=>'active'])->get();
+        return view('frontend.issues.details',$data,compact('issue'));
+    }
+    public function decisions()
+    {
+        $data['seo'] = Seo::first();
+        $data['settings'] = Setting::first();
+        $data['about'] = About::first();
+        $data['counter'] = Counter::first();
+        $data['decisions'] = Decision::where(['status'=>'active'])->get();
+        $data['news'] = Short::where(['status'=>'active'])->get();
+        return view('frontend.decisions.index',$data);
+    }
+    public function decisionsDetails($id)
+    {
+        $data['seo'] = Seo::first();
+        $data['settings'] = Setting::first();
+        $data['about'] = About::first();
+        $data['counter'] = Counter::first();
+        $data['decisions'] = Decision::where(['status'=>'active'])->get();
+        $data['services'] = Service::where(['status'=>'active'])->get();
+        $decision = Decision::findOrFail($id);
+        $data['news'] = Short::where(['status'=>'active'])->get();
+        return view('frontend.decisions.details',$data,compact('decision'));
+    }
     public function blog()
     {
         $data['seo'] = Seo::first();
@@ -127,5 +187,43 @@ class HomeController extends Controller
         $blog = Blog::findOrFail($id);
         $data['news'] = Short::where(['status'=>'active'])->get();
         return view('frontend.blog.details',$data,compact('blog'));
+    }
+    public function email(Request $request)
+    {
+        $this->validate($request,[
+            'email'         => 'required|email',
+        ]);
+        $data = $request->all();
+        // dd($data);
+        $status = Mail::to('omarabosamaha@gmail.com')->send(new Email($data));
+        if($status){
+            toastr()->success(__('website.sup0'));
+            return back();
+        }else{
+            toastr()->success(__('website.sup0'));
+            return back();
+        }
+    }
+    public function store(Request $request)
+    {
+        $this->validate($request,[
+            'name'          => 'required',
+            'email'         => 'required|email',
+            'phone'        => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'subject'       => 'required',
+            'address'       => 'required',
+        ]
+       );
+        $data = $request->all();
+        // dd($data);
+        $status = Mail::to('omarabosamaha@gmail.com')->send(new ContactMail($data));
+        
+        if($status){
+            toastr()->success(__('website.sendmessage'));
+            return back();
+        }else{
+            toastr()->success(__('website.sendmessage'));
+            return back();
+        }
     }
 }
